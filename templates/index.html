@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="cont">
+	<p>Esse é um simples encurtador de url feito em Python em algumas horas.</p>
+	<p>Caso você tenha algum link e queira que ele seja encurtado, use a caixa de texto abaixo e clique em encurtar.</p>
+	<input type="text" id="url-input" placeholder="Ex: http://google.com">
+	<button id="short" onclick="shortIt()">reduzir</button>
+</section>
+{% endblock %}
