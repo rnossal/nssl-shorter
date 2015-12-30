@@ -3,15 +3,18 @@
 
 import pymongo, base62, urllib2, re, json
 
-#Pega a url da base de dados, inicia o cliente e depois pega o banco
+#Lê arquivo de configuração
 with open('conf/conf.json') as json_data:
     conf = json.load(json_data)
 
+#Pega a url da base de dados, inicia o cliente e depois pega o banco
 MONGODB_URI = 'mongodb://%s:%s@%s:%s/%s' % (conf['mongoConnection']['user'],
 											conf['mongoConnection']['password'],
 											conf['mongoConnection']['host'],
 											conf['mongoConnection']['port'],
 											conf['mongoConnection']['database'])
+#Estrutura: mongodb://[usuário]:[senha]@[host]:[porta]/[base de dados]
+
 client = pymongo.MongoClient(MONGODB_URI)
 db = client.get_default_database()
 
