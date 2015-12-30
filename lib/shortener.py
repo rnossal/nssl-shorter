@@ -4,7 +4,7 @@
 import pymongo, base62, urllib2, re, json
 
 #Pega a url da base de dados, inicia o cliente e depois pega o banco
-with open('lib/conf.json') as json_data:
+with open('conf/conf.json') as json_data:
     conf = json.load(json_data)
 
 MONGODB_URI = 'mongodb://%s:%s@%s:%s/%s' % (conf['mongoConnection']['user'],
