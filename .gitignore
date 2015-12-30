@@ -3,6 +3,7 @@
 # Example .gitignore files: https://github.com/github/gitignore
 /bower_components/
 /node_modules/
+/conf/conf.json
 venv
 *.pyc
 tests.py

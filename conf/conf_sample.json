@@ -1,0 +1,9 @@
+{
+  "mongoConnection": {
+    "user": "XXX",
+    "password": "XXX",
+    "host": "XXX",
+    "port": "XXX",
+    "database": "XXX"
+  }
+}
