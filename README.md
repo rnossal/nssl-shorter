@@ -9,7 +9,7 @@ Pode ser acessado no link [Rnossal URL Shortener]
 
 ## Configuração do ambiente
 **TODO**
-- Instalar Python 2.7
+- Instalar Python 2.7 (para seguir a execução no ambiente de desenvolvimento também ter pip)
 - Dependências no Python: Flask, Jinja2, MarkupSafe, Werkzeug, argparse, gunicorn, itsdangerous, wsgiref, pymongo
 - Configurar a "MONGODB_URI" em lib/shortener.py com a URL do banco desejada
 
@@ -17,8 +17,9 @@ No Heroku:
 ```
 heroku ps:scale web=1 --app [nome do app no heroku]
 ```
-No ambiente de desenvolvimento:
+No ambiente de desenvolvimento para testes:
 ```
+pip install Flask Jinja2 MarkupSafe Werkzeug argparse gunicorn itsdangerous wsgiref pymongo
 python app.py
 ```
 

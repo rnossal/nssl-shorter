@@ -22,7 +22,7 @@ urls = db['urls']
 
 #Cria a chave e associa à URL
 def create_short(url):
-	url = re.sub('^http://', '', url)
+	url = re.sub('^http://|^https://', '', url)
 	if url_exists(url) is False:
 		try:
 			req = urllib2.Request("http://" + url, headers={'User-Agent' : "Nossal's Browser"})
