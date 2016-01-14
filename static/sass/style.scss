@@ -1,4 +1,4 @@
-//For compiling: sass -wt compressed static/sass/style.scss:stat/css/style.css
+//For compiling: sass -wt compressed static/sass/style.scss:static/css/style.css
 
 $font: Helvetica, Arial, sans-serif;
 
@@ -12,6 +12,7 @@ $a-color: #7A848C;
 $a-hover-color: #54728C;
 $urlDone-back: #4caf50;
 $urlError-back: #f44336;
+$urlDone-color: #484c55;
 
 h1 {
 	font-size: 30px;
@@ -71,6 +72,10 @@ a {
 }
 a:hover {
 	color: $a-hover-color;
+}
+#newURL {
+	color: $urlDone-color;
+	text-decoration: underline;
 }
 #not-found {
 	font-size: 5em;

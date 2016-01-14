@@ -18,7 +18,7 @@ function printMessage(response) {
 	message.id = 'spn';
 	if (response.errorCode == null) {
 		var newUrl = window.location.href + response.url;
-		message.innerHTML = 'Aqui está sua URL encurtada: <a href="' + newUrl + '">' + newUrl + '</a>';
+		message.innerHTML = 'Aqui está sua URL encurtada: <a id="newURL" href="' + newUrl + '">' + newUrl + '</a>';
 		message.className = 'urlDone';
 	}
 	else if (response.errorCode == 0) {
