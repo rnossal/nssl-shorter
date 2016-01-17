@@ -16,12 +16,12 @@ function printMessage(response) {
 	response = JSON.parse(response);
 	var message = document.createElement('span');
 	message.id = 'spn';
-	if (response.errorCode == null) {
+	if (response.errorCode === null) {
 		var newUrl = window.location.href + response.url;
 		message.innerHTML = 'Aqui está sua URL encurtada: <a id="newURL" href="' + newUrl + '">' + newUrl + '</a>';
 		message.className = 'urlDone';
 	}
-	else if (response.errorCode == 0) {
+	else if (response.errorCode === 0) {
 		message.innerHTML = 'Você precisa fornecer alguma URL para ser encurtada pelo menos.';
 		message.className = 'urlError';
 	}
@@ -30,7 +30,7 @@ function printMessage(response) {
 		message.className = 'urlError';
 	}
 	var spn = document.getElementById('spn');
-	if (spn != null) {
+	if (spn !== null) {
 		spn.parentNode.removeChild(spn);
 	}
 	insertAfter(message, document.getElementById('cont'));
@@ -39,3 +39,10 @@ function printMessage(response) {
 function insertAfter(newNode, referenceNode) {
 	referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
+
+function inputKeyPress(evt) {
+	if(evt.which == 13 || evt.keyCode == 13) {
+		shortIt();
+	}
+}
+document.getElementById('url-input').addEventListener('keypress', inputKeyPress);
