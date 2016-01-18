@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-import pymongo, base62, urllib2, re, json
+import os, pymongo, base62, urllib2, re, json
 
 #Lê arquivo de configuração
-with open('conf/conf.json') as json_data:
+with open(os.path.dirname(os.path.abspath(__file__)) + '/../conf/conf.json') as json_data:
     conf = json.load(json_data)
 
 #Pega a url da base de dados, inicia o cliente e depois pega o banco
